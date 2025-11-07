@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
+import controller.BalanceController;
 import controller.AccountController;
 import controller.CardController;
 import controller.LoanController;
 import services.AccountService;
+import services.BalanceService;
 import services.LoanService;
 
 public class App {
@@ -21,7 +23,8 @@ public class App {
                         runCrudMenu("Account");
                         break;
                     case "2":
-                        runCrudMenu("Balance");
+                        BalanceController balanceController = new BalanceController(new BalanceService());
+                        balanceController.menu();
                         break;
                     case "3":
                         LoanController loanController = new LoanController(new LoanService());
