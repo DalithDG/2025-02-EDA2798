@@ -3,7 +3,6 @@ package controller;
 import model.Account;
 import services.AccountService;
 import services.IAccountService;
-import repositories.AccountRepository;
 
 import java.util.Scanner;
 
@@ -22,7 +21,6 @@ public class AccountController {
             System.out.println("3. Find All Accounts");
             System.out.println("4. Delete Account");
             System.out.println("5. Update Account");
-            System.out.println("6. List All Accounts");
             System.out.println("0. Exit");
             System.out.print("Select an option: ");
             option = Integer.parseInt(scanner.nextLine());

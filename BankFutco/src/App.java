@@ -4,13 +4,11 @@ import controller.BalanceController;
 import controller.AccountController;
 import controller.CardController;
 import controller.LoanController;
-import services.AccountService;
 import services.BalanceService;
 import services.LoanService;
 
 public class App {
-    private static AccountService accountService = new AccountService();
-    private static AccountController createAccount = new AccountController();
+    
 
     public static void main(String[] args) throws Exception {
         try (Scanner sc = new Scanner(System.in)) {
