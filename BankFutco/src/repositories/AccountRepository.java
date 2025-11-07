@@ -29,6 +29,7 @@ public class AccountRepository {
         storage.add(new Account("ACC009", "Natalia Vega", "natalia.vega@example.com", "3000000009", "Savings", "Calle 9"));
         storage.add(new Account("ACC010", "Jorge Castro", "jorge.castro@example.com", "3000000010", "Checking",
                 "Calle 10"));
+        
     }
 
     public Account save(Account account) {
@@ -36,7 +37,15 @@ public class AccountRepository {
 			throw new IllegalArgumentException("Account o accountNumber no puede ser null");
 		}
 		storage.removeIf(a -> a.getAccountNumber().equals(account.getAccountNumber()));
-        storage.add(account);
+        storage.add(new Account(
+            account.getAccountNumber(),
+            account.getName(),
+            account.getEmail(),
+            account.getMobileNumber(),
+            account.getAccountType(),
+            account.getAddress()
+            
+        ));
         return account;
 	}
 
