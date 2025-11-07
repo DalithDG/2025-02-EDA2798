@@ -49,7 +49,7 @@ public class BalanceController {
 
         LocalDate date = LocalDate.now();
 
-        System.out.print("Descripción: ");
+        System.out.print("Descripción: BILL, HOUSE, SHOP,");
         BalanceType type = BalanceType.valueOf(sc.nextLine().toUpperCase());
 
         System.out.print("Monto entrante (cashIn): ");
