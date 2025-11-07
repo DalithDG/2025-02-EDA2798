@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
+import controller.LoanController;
 import model.Account;
 import services.AccountService;
+import services.LoanService;
 
 public class App {
     private static AccountService accountService = new AccountService();
@@ -35,7 +37,9 @@ public class App {
                         runCrudMenu(sc, "Balance");
                         break;
                     case "3":
-                        runCrudMenu(sc, "Loans");
+                        //comentario
+                        LoanController loanController = new LoanController(new LoanService());
+                        loanController.menu();
                         break;
                     case "4":
                         runCrudMenu(sc, "Cards");
